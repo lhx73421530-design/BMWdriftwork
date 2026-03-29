@@ -24,77 +24,110 @@
         </div>
     </nav>
 
-    <!-- 产品详情主体 -->
-<main class="max-w-7xl mx-auto px-6 py-12 lg:py-20">
-    <div class="grid lg:grid-cols-2 gap-16">
-        
-        <!-- 左侧：产品图片库 -->
-        <div class="space-y-6">
-            <!-- 1. 主展示大图：点击可触发全屏放大 -->
-            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl cursor-zoom-in group" onclick="openLightbox()">
-                <img id="mainImage" src="images/E46-60Du.jpg" alt="BMW Angle Kit Main" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                <div class="absolute bottom-4 right-4 bg-black/50 p-2 rounded text-[10px] uppercase tracking-widest text-white pointer-events-none">Click to Zoom</div>
+    <!-- 产品核心详情 -->
+    <main class="max-w-7xl mx-auto px-6 py-12 lg:py-20">
+        <div class="grid lg:grid-cols-2 gap-16">
+            
+            <!-- 左侧：产品图片库 -->
+            <div class="space-y-6">
+                <!-- 主展示大图：点击全屏放大 -->
+                <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl cursor-zoom-in group relative" onclick="openLightbox()">
+                    <img id="mainDisplay" src="images/E46-60Du.jpg" alt="E46 Angle Kit Main" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute bottom-4 right-4 bg-black/60 px-3 py-1 rounded text-[10px] uppercase tracking-widest font-bold">Click to Zoom</div>
+                </div>
+
+                <!-- 3张缩略图：点击切换大图 -->
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-zinc-900 aspect-square rounded border border-zinc-800 overflow-hidden cursor-pointer hover:border-blue-500 transition">
+                        <img src="images/E46-60Du.jpg" onclick="updateMainImage(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="bg-zinc-900 aspect-square rounded border border-zinc-800 overflow-hidden cursor-pointer hover:border-blue-500 transition">
+                        <img src="images/E46-60Du2.jpg" onclick="updateMainImage(this.src)" class="w-full h-full object-cover">
+                    </div>
+                    <div class="bg-zinc-900 aspect-square rounded border border-zinc-800 overflow-hidden cursor-pointer hover:border-blue-500 transition">
+                        <img src="images/E46-60Du-look.jpg" onclick="updateMainImage(this.src)" class="w-full h-full object-cover">
+                    </div>
+                </div>
             </div>
 
-            <!-- 2. 下方缩略图：点击切换大图 -->
-            <div class="grid grid-cols-3 gap-4">
-                <div class="bg-zinc-900 aspect-square rounded border border-zinc-800 overflow-hidden cursor-pointer hover:border-blue-500 transition">
-                    <img src="images/E46-60Du.jpg" onclick="updateMainImage(this.src)" class="w-full h-full object-cover">
-                </div>
-                <div class="bg-zinc-900 aspect-square rounded border border-zinc-800 overflow-hidden cursor-pointer hover:border-blue-500 transition">
-                    <img src="images/E46-60Du-look.jpg" onclick="updateMainImage(this.src)" class="w-full h-full object-cover">
-                </div>
-                <div class="bg-zinc-900 aspect-square rounded border border-zinc-800 overflow-hidden cursor-pointer hover:border-blue-500 transition">
-                    <img src="images/E46-Du2.jpg" onclick="updateMainImage(this.src)" class="w-full h-full object-cover">
-                </div>
-            </div>
-        </div>
+            <!-- 右侧：产品信息 -->
+            <div class="flex flex-col">
+                <div class="h-1 w-24 m-line mb-8"></div>
+                <h1 class="font-drift text-3xl md:text-5xl font-black italic mb-6 leading-tight uppercase text-blue-500">
+                    E46 Entry-Level<br>Pro Angle Kit
+                </h1>
+                
+                <p class="text-gray-400 text-lg mb-8 italic tracking-wide font-light">
+                    Low-cost solution with surprisingly high drift performance. Designed for easy and fast installation.
+                </p>
 
-        <!-- 右侧：产品信息（保持你之前的代码，只需确保 ID 正确） -->
-        <div class="flex flex-col">
-            <div class="h-1 w-24 m-line mb-8"></div>
-            <h1 class="font-drift text-3xl md:text-5xl font-black italic mb-6 leading-tight uppercase text-blue-500">E46 Entry-Level<br>Pro Angle Kit</h1>
-            <!-- ... 这里的描述代码保持不变 ... -->
-            <div class="bg-zinc-900/80 p-8 rounded-2xl border border-zinc-800 mb-10 shadow-inner">
-                <!-- 技术参数表... -->
-                <ul class="space-y-4 text-sm font-medium">
-                    <li class="flex justify-between border-b border-zinc-800/50 pb-3"><span class="text-gray-500 uppercase">Max Lock Angle</span><span class="text-white font-black italic uppercase">60° Degrees</span></li>
-                    <li class="flex justify-between border-b border-zinc-800/50 pb-3"><span class="text-gray-500 uppercase">Ackermann</span><span class="text-white font-black italic uppercase">5° - 6° Optimized</span></li>
-                    <li class="flex justify-between border-b border-zinc-800/50 pb-3"><span class="text-gray-500 uppercase">Installation</span><span class="text-green-500 font-black italic uppercase">Simple Bolt-On</span></li>
-                </ul>
+                <!-- 核心参数卡片 -->
+                <div class="bg-zinc-900/80 p-8 rounded-2xl border border-zinc-800 mb-10 shadow-inner">
+                    <h3 class="font-drift text-xs font-bold mb-6 text-gray-500 uppercase tracking-[0.3em]">Technical Specs</h3>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li class="flex justify-between border-b border-zinc-800/50 pb-3">
+                            <span class="text-gray-500">MAX LOCK ANGLE</span>
+                            <span class="text-white font-black italic">60° DEGREES</span>
+                        </li>
+                        <li class="flex justify-between border-b border-zinc-800/50 pb-3">
+                            <span class="text-gray-500">ACKERMANN ANGLE</span>
+                            <span class="text-white font-black italic">5° - 6° OPTIMIZED</span>
+                        </li>
+                        <li class="flex justify-between border-b border-zinc-800/50 pb-3">
+                            <span class="text-gray-500">INSTALLATION</span>
+                            <span class="text-green-500 font-black italic uppercase">SIMPLE & FAST BOLT-ON</span>
+                        </li>
+                        <li class="flex justify-between border-b border-zinc-800/50 pb-3">
+                            <span class="text-gray-500">VERSATILITY</span>
+                            <span class="text-white font-black italic uppercase">STREET / TRACK DAY READY</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-500">PRICE STATUS</span>
+                            <span class="text-blue-500 font-black italic uppercase">BUDGET FRIENDLY</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 购买转化按钮 -->
+                <a href="https://wa.me/8613561675079?text=Hi, I'm interested in the E46 Entry-Level Pro Angle Kit (60 degree lock)." 
+                   class="block w-full bg-blue-600 text-center py-5 font-black italic uppercase text-xl hover:bg-red-600 transition-all duration-300 rounded shadow-lg shadow-blue-900/20">
+                    <i class="fab fa-whatsapp mr-3"></i> Get Quote via WhatsApp
+                </a>
+                <p class="text-center text-zinc-600 text-[10px] mt-6 uppercase tracking-[0.4em]">Worldwide Shipping | Professional Drift Supply</p>
             </div>
-            <!-- 购买按钮 -->
-            <a href="https://wa.me/8613561675079?text=Hi, I am interested in E46 Angle Kit." class="block w-full bg-blue-600 text-center py-5 font-black italic uppercase text-xl hover:bg-red-600 transition-all rounded shadow-lg shadow-blue-900/20">
-                <i class="fab fa-whatsapp mr-3"></i> Get Quote via WhatsApp
-            </a>
         </div>
+    </main>
+
+    <!-- 全屏查看遮罩 (Lightbox) -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-[9999] hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+        <button class="absolute top-10 right-10 text-white text-4xl hover:text-red-600">&times;</button>
+        <img id="lightboxImg" src="" class="max-w-full max-h-full object-contain">
     </div>
-</main>
 
-<!-- 3. 全屏放大遮罩层（Lightbox） - 默认隐藏 -->
-<div id="lightbox" class="fixed inset-0 bg-black/95 z-[9999] hidden flex items-center justify-center p-4 md:p-12" onclick="closeLightbox()">
-    <button class="absolute top-10 right-10 text-white text-4xl font-light hover:text-red-600">&times;</button>
-    <img id="lightboxImg" src="" class="max-w-full max-h-full object-contain shadow-2xl">
-</div>
+    <!-- 脚本逻辑 -->
+    <script>
+        function updateMainImage(src) {
+            document.getElementById('mainDisplay').src = src;
+        }
+        function openLightbox() {
+            const currentSrc = document.getElementById('mainDisplay').src;
+            document.getElementById('lightboxImg').src = currentSrc;
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
 
-<!-- 4. 核心脚本：实现切换与放大功能 -->
-<script>
-    // 切换大图函数
-    function updateMainImage(src) {
-        document.getElementById('mainImage').src = src;
-    }
+    <!-- 页脚 -->
+    <footer class="py-20 bg-black border-t border-zinc-900 text-center">
+        <div class="font-drift text-lg italic font-black mb-4 tracking-tighter">
+            BMW<span class="text-blue-500">DRIFT</span><span class="text-red-600">WORK</span>
+        </div>
+        <p class="text-zinc-700 text-[10px] uppercase tracking-[0.4em]">Precision Drift Engineering | Est. 2024</p>
+    </footer>
 
-    // 开启全屏查看
-    function openLightbox() {
-        const mainSrc = document.getElementById('mainImage').src;
-        document.getElementById('lightboxImg').src = mainSrc;
-        document.getElementById('lightbox').classList.remove('hidden');
-        document.body.style.overflow = 'hidden'; // 禁止背景滚动
-    }
-
-    // 关闭全屏查看
-    function closeLightbox() {
-        document.getElementById('lightbox').classList.add('hidden');
-        document.body.style.overflow = 'auto'; // 恢复背景滚动
-    }
-</script>
+</body>
+</html>
