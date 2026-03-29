@@ -49,24 +49,57 @@
         </div>
     </header>
 
-    <!-- BMW E46 Entry-Level Pro Angle Kit 产品块 -->
-<div class="group bg-zinc-900 border border-zinc-800 p-8 rounded-lg">
-    <div class="aspect-video bg-zinc-800 mb-8 rounded overflow-hidden">
-        <!-- 点击图片也能跳到详情页 -->
-        <a href="E46-Entry-Level-Pro-Angle-kit.html">
-            <img src="images/e46-angle-kit.jpg" alt="E46 Angle Kit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-        </a>
+   <!-- 橱窗式产品展示板块开始 -->
+<section id="shop" class="py-12 px-6 max-w-7xl mx-auto">
+    <div class="flex items-center justify-between mb-8 border-b border-zinc-900 pb-4">
+        <h2 class="font-drift text-xl md:text-2xl font-black italic uppercase text-blue-500">
+            PRO <span class="text-white">CATALOG</span>
+        </h2>
+        <span class="text-[10px] text-zinc-600 uppercase tracking-[0.3em]">Worldwide Shipping</span>
     </div>
-    <h3 class="font-drift text-2xl mb-4 italic text-blue-500 uppercase">E46 Entry-Level Pro</h3>
-    <p class="text-gray-500 mb-6 text-sm uppercase">60° Max Lock | Simple Bolt-on | Street & Track</p>
-    <div class="flex items-center justify-between">
-        <span class="text-3xl font-black font-drift">$649.00</span>
-        <!-- 这个就是你要找的详情链接 -->
-        <a href="E46-Entry-Level-Pro-Angle-kit.html" class="bg-white text-black px-6 py-2 font-black italic uppercase text-xs hover:bg-red-600 hover:text-white transition">
-            Details
-        </a>
+
+    <!-- 橱窗网格：手机端2列，电脑端4列 -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        
+        <!-- 产品 1：E46 Entry-Level Pro -->
+        <div class="group bg-zinc-900/30 border border-zinc-800 p-3 rounded hover:border-red-600 transition-all duration-300">
+            <!-- 图片容器：固定正方形，防止图片过大 -->
+            <div class="aspect-square w-full mb-4 overflow-hidden rounded bg-zinc-800">
+                <a href="E46-Entry-Level-Pro-Angle-kit.html">
+                    <!-- 精确使用你提供的图片名 -->
+                    <img src="images/E46-60Du.jpg" alt="E46 Angle Kit" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                </a>
+            </div>
+            <!-- 简短描述 -->
+            <h3 class="font-drift text-[11px] md:text-xs mb-1 italic text-blue-400 uppercase leading-tight">E46 Entry-Level Pro</h3>
+            <p class="text-[9px] text-zinc-600 mb-4 uppercase font-bold">60° Lock / 5-6° Ackermann</p>
+            
+            <div class="flex items-center justify-between mt-auto">
+                <span class="text-sm font-black font-drift text-white">$499</span>
+                <a href="E46-Entry-Level-Pro-Angle-kit.html" class="text-[9px] bg-white text-black px-2 py-1 font-black italic uppercase hover:bg-red-600 hover:text-white transition">
+                    DETAILS
+                </a>
+            </div>
+        </div>
+
+        <!-- 产品 2：液压手刹 (示例占位) -->
+        <div class="group bg-zinc-900/30 border border-zinc-800 p-3 rounded opacity-50">
+            <div class="aspect-square w-full mb-4 overflow-hidden rounded bg-zinc-800 flex items-center justify-center text-[10px] text-zinc-600 italic">
+                COMING SOON
+            </div>
+            <h3 class="font-drift text-[11px] mb-1 italic uppercase">Pro Handbrake</h3>
+            <p class="text-[9px] text-zinc-700 mb-4 uppercase">Dual Cylinder</p>
+            <div class="flex items-center justify-between">
+                <span class="text-sm font-black font-drift text-zinc-700">$129</span>
+                <span class="text-[9px] border border-zinc-800 px-2 py-1 text-zinc-800 font-black italic">WAITING</span>
+            </div>
+        </div>
+
+        <!-- 你可以继续复制【产品 1】的代码块来填充第 3 和 第 4 个位置 -->
+
     </div>
-</div>
+</section>
+<!-- 橱窗式产品展示板块结束 -->
             <!-- 产品 2 类似，可自行添加 -->
         </div>
     </section>
