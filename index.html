@@ -18,45 +18,43 @@
 </head>
 <body class="bg-carbon text-white font-sans">
 
-    <!-- 头部导航 -->
+    <!-- 头部导航 (居中优化版) -->
 <nav class="bg-black/95 border-b border-gray-900 sticky top-0 z-[100] backdrop-blur-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <!-- Logo -->
-        <div class="font-drift text-2xl font-black italic tracking-tighter">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center relative">
+        
+        <!-- Logo (左侧) -->
+        <div class="font-drift text-2xl font-black italic tracking-tighter mb-4 md:mb-0">
             <a href="index.html">BMW<span class="text-blue-500">DRIFT</span><span class="text-red-600">WORK</span></a>
         </div>
 
-        <!-- 导航菜单 -->
-        <div class="hidden md:flex items-center space-x-10 text-[11px] font-bold uppercase tracking-widest">
+        <!-- 导航菜单 (绝对居中) -->
+        <div class="flex items-center space-x-8 text-[11px] font-bold uppercase tracking-widest md:absolute md:left-1/2 md:-translate-x-1/2">
             
-            <!-- 1. 角度套件下拉菜单 (Hover) -->
+            <!-- 1. 角度套件下拉菜单 -->
             <div class="relative group">
-                <a href="#angle-kits" class="flex items-center hover:text-red-500 transition py-2">
+                <a href="#" class="flex items-center hover:text-red-500 transition py-2">
                     Angle Kits <i class="fas fa-chevron-down ml-2 text-[8px]"></i>
                 </a>
-                <!-- 下拉列表 -->
-                <div class="absolute left-0 top-full hidden group-hover:block bg-zinc-900 border border-zinc-800 w-40 py-2 shadow-2xl">
-                    <a href="E46-Entry-Level-Pro-Angle-kit.html" class="block px-4 py-2 hover:bg-blue-600 hover:text-white transition">E46 (E43)</a>
-                    <a href="E8X-Angle-kit.html" class="block px-4 py-2 hover:bg-blue-600 hover:text-white transition border-t border-zinc-800/50">E8X Series</a>
-                    <a href="E9X-Angle-kit.html" class="block px-4 py-2 hover:bg-blue-600 hover:text-white transition border-t border-zinc-800/50">E9X Series</a>
-                    <a href="F2X-Angle-kit.html" class="block px-4 py-2 hover:bg-blue-600 hover:text-white transition border-t border-zinc-800/50">F2X Series</a>
-                    <a href="F3X-Angle-kit.html" class="block px-4 py-2 hover:bg-blue-600 hover:text-white transition border-t border-zinc-800/50">F3X Series</a>
-                    <a href="F8X-Angle-kit.html" class="block px-4 py-2 hover:bg-blue-600 hover:text-white transition border-t border-zinc-800/50">F8X Series</a>
+                <div class="absolute left-0 top-full hidden group-hover:block bg-zinc-900 border border-zinc-800 w-48 py-2 shadow-2xl">
+                    <!-- 注意：这里指向类目页 -->
+                    <a href="Angle-Kits-E46.html" class="block px-4 py-2 hover:bg-blue-600 transition">E46 Series</a>
+                    <a href="Angle-Kits-E8X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/50">E8X Series</a>
+                    <a href="Angle-Kits-E9X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/50">E9X Series</a>
+                    <a href="Angle-Kits-F-Series.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/50">F2X/F3X/F8X</a>
                 </div>
             </div>
 
-            <!-- 2. 液压手刹 (独立页面) -->
-            <a href="Hydraulic-Handbrake.html" class="hover:text-red-500 transition">Handbrakes</a>
+            <!-- 2. 液压手刹 (类目页) -->
+            <a href="Handbrakes.html" class="hover:text-red-500 transition">Handbrakes</a>
 
-            <!-- 3. 心情改装件 (新增类目) -->
+            <!-- 3. 心情改装件 (类目页) -->
             <a href="Aesthetic-Parts.html" class="hover:text-red-500 transition">Aesthetic Parts</a>
-
-            <!-- 4. 立即订购 -->
-            <a href="https://wa.me/8613561675079" class="text-blue-400 hover:text-white transition border-l border-zinc-800 pl-6">Order Now</a>
         </div>
 
-        <!-- 移动端 WhatsApp 按钮 -->
-        <a href="https://wa.me/8613561675079" class="md:hidden text-green-500 text-xl"><i class="fab fa-whatsapp"></i></a>
+        <!-- 立即订购 (右侧) -->
+        <div class="hidden md:block">
+            <a href="https://wa.me/8613561675079" class="text-blue-400 hover:text-white transition font-bold text-[11px] uppercase tracking-widest">Order Now</a>
+        </div>
     </div>
 </nav>
 
