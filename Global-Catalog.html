@@ -11,83 +11,123 @@
 </head>
 <body class="bg-[#050505] text-white font-sans text-[11px]">
 
-    <!-- 全新拆分版居中导航 -->
-<nav class="bg-black/95 border-b border-gray-900 sticky top-0 z-[100] backdrop-blur-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center relative">
-        <!-- Logo -->
-        <div class="font-drift text-2xl font-black italic tracking-tighter mb-4 md:mb-0">
-            <a href="index.html">BMW<span class="text-blue-500">DRIFT</span><span class="text-red-600">WORK</span></a>
-        </div>
-
-        <!-- 导航菜单 -->
-        <div class="flex items-center space-x-6 text-[10px] font-bold uppercase tracking-widest md:absolute md:left-1/2 md:-translate-x-1/2">
-            <!-- 1. 角度套件下拉 (已拆分) -->
-            <div class="relative group">
-                <a href="#" class="flex items-center hover:text-red-500 transition py-2">
-                    Angle Kits <i class="fas fa-chevron-down ml-1 text-[7px]"></i>
-                </a>
-                <div class="absolute left-0 top-full hidden group-hover:block bg-zinc-900 border border-zinc-800 w-44 py-2 shadow-2xl">
-                    <a href="Angle-Kits-E46.html" class="block px-4 py-2 hover:bg-blue-600 transition">E46 Series</a>
-                    <a href="Angle-Kits-E8X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/30">E8X Series</a>
-                    <a href="Angle-Kits-E9X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/30">E9X Series</a>
-                    <a href="Angle-Kits-F2X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/30">F2X Series</a>
-                    <a href="Angle-Kits-F3X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/30">F3X Series</a>
-                    <a href="Angle-Kits-F8X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/30">F8X Series</a>
-                </div>
+    <!-- 顶部导航栏 (同步最新的居中设计) -->
+    <nav class="bg-black/95 border-b border-gray-900 sticky top-0 z-[100] backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center relative">
+            <div class="font-drift text-2xl font-black italic tracking-tighter mb-4 md:mb-0">
+                <a href="index.html">BMW<span class="text-blue-500">DRIFT</span><span class="text-red-600">WORK</span></a>
             </div>
-            <a href="Handbrakes.html" class="hover:text-red-500 transition">Handbrakes</a>
-            <a href="Aesthetic-Parts.html" class="hover:text-red-500 transition">Aesthetic Parts</a>
+            <div class="flex items-center space-x-6 text-[10px] font-bold uppercase tracking-widest md:absolute md:left-1/2 md:-translate-x-1/2">
+                <div class="relative group">
+                    <a href="#" class="flex items-center hover:text-red-500 transition py-2">
+                        Angle Kits <i class="fas fa-chevron-down ml-1 text-[7px]"></i>
+                    </a>
+                    <div class="absolute left-0 top-full hidden group-hover:block bg-zinc-900 border border-zinc-800 w-44 py-2 shadow-2xl">
+                        <a href="Angle-Kits-E46.html" class="block px-4 py-2 hover:bg-blue-600 transition">E46 Series</a>
+                        <a href="Angle-Kits-E8X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/30">E8X Series</a>
+                        <a href="Angle-Kits-E9X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/30">E9X Series</a>
+                        <a href="Angle-Kits-F2X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/30">F2X Series</a>
+                        <a href="Angle-Kits-F3X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/30">F3X Series</a>
+                        <a href="Angle-Kits-F8X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/30">F8X Series</a>
+                    </div>
+                </div>
+                <a href="Handbrakes.html" class="hover:text-red-500 transition">Handbrakes</a>
+                <a href="Aesthetic-Parts.html" class="hover:text-red-500 transition">Aesthetic Parts</a>
+            </div>
+            <div class="hidden md:block">
+                <a href="https://wa.me/8613561675079" class="text-blue-400 hover:text-white transition font-bold text-[10px] uppercase tracking-widest">Order Now</a>
+            </div>
         </div>
-
-        <div class="hidden md:block">
-            <a href="https://wa.me/8613561675079" class="text-blue-400 hover:text-white transition font-bold text-[10px] uppercase tracking-widest">Order Now</a>
-        </div>
-    </div>
-</nav>
+    </nav>
 
     <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-10">
         
-        <!-- 左侧专业侧边栏 (Sticky) -->
+        <!-- 左侧专业侧边栏 -->
         <aside class="w-full md:w-64 flex-shrink-0">
-            <div class="sticky top-28 bg-zinc-900/50 p-6 border border-zinc-800 rounded">
-                <h3 class="font-drift text-xs font-bold mb-6 text-blue-500 uppercase tracking-widest">Browse Categories</h3>
-                <ul class="space-y-4">
-                    <!-- 角度套件子菜单 -->
+            <div class="sticky top-28 bg-zinc-900/30 p-6 border border-zinc-800 rounded-lg">
+                <h3 class="font-drift text-[10px] font-bold mb-6 text-blue-500 uppercase tracking-widest italic">Inventory Filter</h3>
+                <ul class="space-y-6">
                     <li>
-                        <span class="text-white font-bold block mb-2 opacity-50">ANGLE KITS</span>
-                        <ul class="pl-4 space-y-2 border-l border-zinc-800">
-                            <li><a href="Angle-Kits-E46.html" class="hover:text-red-500 transition block">E46 Series</a></li>
-                            <li><a href="Angle-Kits-E8X.html" class="hover:text-red-500 transition block">E8X Series</a></li>
-                            <li><a href="Angle-Kits-E9X.html" class="hover:text-red-500 transition block">E9X Series</a></li>
-                            <li><a href="Angle-Kits-F2X.html" class="hover:text-red-500 transition block">F2X Series</a></li>
-                            <li><a href="Angle-Kits-F3X.html" class="hover:text-red-500 transition block">F3X Series</a></li>
-                            <li><a href="Angle-Kits-F8X.html" class="hover:text-red-500 transition block">F8X Series</a></li>
+                        <span class="text-zinc-500 font-bold block mb-3 text-[9px] uppercase tracking-widest">Angle Kits</span>
+                        <ul class="pl-3 space-y-2 border-l border-zinc-800 text-[10px]">
+                            <li><a href="Angle-Kits-E46.html" class="hover:text-red-500 transition block">E46 SERIES</a></li>
+                            <li><a href="Angle-Kits-E8X.html" class="hover:text-red-500 transition block">E8X SERIES</a></li>
+                            <li><a href="Angle-Kits-E9X.html" class="hover:text-red-500 transition block">E9X SERIES</a></li>
+                            <li><a href="Angle-Kits-F2X.html" class="hover:text-red-500 transition block">F2X SERIES</a></li>
+                            <li><a href="Angle-Kits-F3X.html" class="hover:text-red-500 transition block">F3X SERIES</a></li>
+                            <li><a href="Angle-Kits-F8X.html" class="hover:text-red-500 transition block">F8X SERIES</a></li>
                         </ul>
                     </li>
-                    <li><a href="Handbrakes.html" class="text-white font-bold hover:text-red-500 block uppercase">HANDBRAKES</a></li>
-                    <li><a href="Aesthetic-Parts.html" class="text-white font-bold hover:text-red-500 block uppercase">AESTHETIC PARTS</a></li>
+                    <li><a href="Handbrakes.html" class="text-white font-bold hover:text-red-500 block uppercase tracking-widest">Handbrakes</a></li>
+                    <li><a href="Aesthetic-Parts.html" class="text-white font-bold hover:text-red-500 block uppercase tracking-widest">Aesthetic Parts</a></li>
                 </ul>
             </div>
         </aside>
 
-        <!-- 右侧产品橱窗展示 -->
+        <!-- 右侧全产品橱窗 -->
         <main class="flex-grow">
-            <h2 class="font-drift text-3xl font-black italic mb-10 border-l-4 border-red-600 pl-4 uppercase">All Products</h2>
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- 产品 1：E46 示例 -->
-                <div class="group bg-zinc-900/30 border border-zinc-800 p-4 rounded hover:border-blue-600 transition">
-                    <div class="aspect-square bg-zinc-800 mb-4 rounded overflow-hidden">
-                        <a href="E46-Entry-Level-Pro-Angle-kit.html"><img src="images/E46-60Du.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500"></a>
+            <div class="flex justify-between items-end mb-10 border-b border-zinc-900 pb-6">
+                <h2 class="font-drift text-3xl font-black italic uppercase">Global <span class="text-blue-500">Catalog</span></h2>
+                <p class="text-zinc-600 text-[9px] uppercase tracking-widest">Displaying all performance hardware</p>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                
+                <!-- 商品 1：E46 Entry-Level Pro -->
+                <div class="group bg-zinc-900/20 border border-zinc-800 p-4 rounded hover:border-blue-600 transition duration-500">
+                    <div class="aspect-square w-full mb-4 overflow-hidden rounded bg-zinc-800">
+                        <a href="E46-Entry-Level-Pro-Angle-kit.html">
+                            <img src="images/E46-60Du.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        </a>
                     </div>
-                    <h4 class="font-drift text-[10px] text-blue-400 mb-1">E46 ANGLE KIT</h4>
-                    <p class="text-white font-bold text-sm mb-4">$649</p>
-                    <a href="E46-Entry-Level-Pro-Angle-kit.html" class="block text-center border border-zinc-700 py-1 hover:bg-white hover:text-black transition uppercase font-black text-[9px]">View Details</a>
+                    <h4 class="font-drift text-[10px] text-blue-400 mb-1 uppercase">Angle Kit</h4>
+                    <h3 class="text-white font-bold text-xs mb-3 uppercase leading-tight">E46 Entry-Level Pro</h3>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm font-black font-drift text-white">$649</span>
+                        <a href="E46-Entry-Level-Pro-Angle-kit.html" class="text-[9px] bg-white text-black px-3 py-1 font-black italic uppercase hover:bg-blue-600 hover:text-white transition">Details</a>
+                    </div>
                 </div>
 
-                <!-- [此处标记：请继续添加更多商品区块] -->
+                <!-- 商品 2：液压手刹 V1 -->
+                <div class="group bg-zinc-900/20 border border-zinc-800 p-4 rounded hover:border-red-600 transition duration-500">
+                    <div class="aspect-square w-full mb-4 overflow-hidden rounded bg-zinc-800">
+                        <a href="Handbrakes.html">
+                            <img src="images/handbrake-main.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://via.placeholder.com/400?text=Handbrake'">
+                        </a>
+                    </div>
+                    <h4 class="font-drift text-[10px] text-red-500 mb-1 uppercase">Handbrake</h4>
+                    <h3 class="text-white font-bold text-xs mb-3 uppercase leading-tight">Pro Drift V1</h3>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm font-black font-drift text-white">$129</span>
+                        <a href="Handbrakes.html" class="text-[9px] border border-zinc-700 text-zinc-400 px-3 py-1 font-black italic uppercase hover:bg-white hover:text-black transition">Details</a>
+                    </div>
+                </div>
+
+                <!-- 商品 3：像素风挡把 -->
+                <div class="group bg-zinc-900/20 border border-zinc-800 p-4 rounded hover:border-red-600 transition duration-500">
+                    <div class="aspect-square w-full mb-4 overflow-hidden rounded bg-zinc-800">
+                        <a href="Pixel-Style-Gearknob.html">
+                            <img src="images/pixel-gearknob.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" onerror="this.src='https://via.placeholder.com/400?text=Gear+Knob'">
+                        </a>
+                    </div>
+                    <h4 class="font-drift text-[10px] text-zinc-500 mb-1 uppercase">Aesthetic</h4>
+                    <h3 class="text-white font-bold text-xs mb-3 uppercase leading-tight">Pixel Style Knob</h3>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm font-black font-drift text-white">$49</span>
+                        <a href="Pixel-Style-Gearknob.html" class="text-[9px] bg-white text-black px-3 py-1 font-black italic uppercase hover:bg-red-600 hover:text-white transition">Details</a>
+                    </div>
+                </div>
+
+                <!-- [后续可继续添加更多商品] -->
+
             </div>
         </main>
     </div>
+
+    <footer class="py-20 bg-black border-t border-zinc-900 text-center">
+        <div class="font-drift text-lg italic font-black mb-4 tracking-tighter">BMW<span class="text-blue-500">DRIFT</span><span class="text-red-600">WORK</span></div>
+        <p class="text-zinc-700 text-[10px] uppercase tracking-[0.4em]">Precision Drift Engineering | Est. 2024</p>
+    </footer>
 
 </body>
 </html>
