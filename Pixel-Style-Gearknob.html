@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Style Gear Knob | Aesthetic Parts | BMWdriftwork</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+    <style>.font-drift { font-family: 'Orbitron', sans-serif; } .m-line { background: linear-gradient(90deg, #0062B1 0%, #0033A0 33%, #EF4123 100%); }</style>
+</head>
+<body class="bg-[#050505] text-white font-sans">
+
+    <!-- 顶部导航 (同步最新版) -->
+    <nav class="bg-black/95 border-b border-gray-900 sticky top-0 z-[100] backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center relative">
+            <div class="font-drift text-2xl font-black italic tracking-tighter mb-4 md:mb-0">
+                <a href="index.html">BMW<span class="text-blue-500">DRIFT</span><span class="text-red-600">WORK</span></a>
+            </div>
+            <div class="flex items-center space-x-8 text-[11px] font-bold uppercase tracking-widest md:absolute md:left-1/2 md:-translate-x-1/2">
+                <div class="relative group">
+                    <a href="#" class="flex items-center hover:text-red-500 transition py-2">Angle Kits <i class="fas fa-chevron-down ml-2 text-[8px]"></i></a>
+                    <div class="absolute left-0 top-full hidden group-hover:block bg-zinc-900 border border-zinc-800 w-48 py-2 shadow-2xl font-bold uppercase">
+                        <a href="Angle-Kits-E46.html" class="block px-4 py-2 hover:bg-blue-600 transition">E46 Series</a>
+                        <a href="Angle-Kits-E8X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/50">E8X Series</a>
+                        <a href="Angle-Kits-E9X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/50">E9X Series</a>
+                        <a href="Angle-Kits-F2X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/50">F2X Series</a>
+                        <a href="Angle-Kits-F3X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/50">F3X Series</a>
+                        <a href="Angle-Kits-F8X.html" class="block px-4 py-2 hover:bg-blue-600 transition border-t border-zinc-800/50">F8X Series</a>
+                    </div>
+                </div>
+                <a href="Handbrakes.html" class="hover:text-red-500 transition">Handbrakes</a>
+                <a href="Aesthetic-Parts.html" class="text-red-500 transition">Aesthetic Parts</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 产品展示 -->
+    <main class="max-w-7xl mx-auto px-6 py-12 lg:py-20">
+        <div class="grid lg:grid-cols-2 gap-16">
+            <!-- 左侧：图片库 (带放大功能) -->
+            <div class="space-y-6">
+                <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl cursor-zoom-in relative" onclick="openLightbox()">
+                    <img id="mainImg" src="images/pixel-gearknob.jpg" class="w-full h-full object-cover transition duration-500 hover:scale-105" onerror="this.src='https://via.placeholder.com/800x800?text=Pixel+Gear+Knob'">
+                    <div class="absolute bottom-4 right-4 bg-black/60 px-3 py-1 rounded text-[10px] font-bold uppercase">Zoom</div>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <img src="images/pixel-gearknob.jpg" onclick="swapImg(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover shadow-lg">
+                    <img src="images/pixel-gearknob2.jpg" onclick="swapImg(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover shadow-lg" onerror="this.src='https://via.placeholder.com/400?text=Side+View'">
+                    <img src="images/pixel-gearknob3.jpg" onclick="swapImg(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover shadow-lg" onerror="this.src='https://via.placeholder.com/400?text=Accessories'">
+                </div>
+            </div>
+
+            <!-- 右侧：描述 -->
+            <div class="flex flex-col">
+                <div class="h-1 w-20 m-line mb-8"></div>
+                <h1 class="font-drift text-4xl md:text-5xl font-black italic mb-6 text-red-600 uppercase">Pixel Style<br>Gear Knob</h1>
+                <p class="text-gray-400 text-lg mb-8 italic font-light leading-relaxed">Unique retro aesthetic for your interior. Perfectly balanced for precision shifting during drift or daily drive.</p>
+                
+                <div class="bg-zinc-900/80 p-8 rounded-2xl border border-zinc-800 mb-10">
+                    <h3 class="font-drift text-xs font-bold mb-6 text-gray-500 uppercase tracking-[0.3em]">Technical Specs</h3>
+                    <ul class="space-y-4 text-[11px] font-medium uppercase">
+                        <li class="flex justify-between border-b border-zinc-800 pb-3"><span>Material</span><span class="text-white font-black italic">Premium Resin</span></li>
+                        <li class="flex justify-between border-b border-zinc-800 pb-3"><span>Weight</span><span class="text-white font-black italic">100g</span></li>
+                        <li class="flex justify-between border-b border-zinc-800 pb-3"><span>Diameter</span><span class="text-white font-black italic">5.4cm / 2.13in</span></li>
+                        <li class="flex justify-between"><span>Included</span><span class="text-blue-500 font-black italic">Thread Adapters / Spacers</span></li>
+                    </ul>
+                </div>
+
+                <div class="text-4xl font-black mb-10 font-drift text-white tracking-tighter">$49.00</div>
+                
+                <a href="https://wa.me/8613561675079?text=Hi, I am interested in the Pixel Style Gear Knob." 
+                   class="block w-full bg-blue-600 text-center py-5 font-black italic uppercase text-xl hover:bg-red-600 transition-all rounded shadow-lg shadow-blue-900/20">
+                    <i class="fab fa-whatsapp mr-3"></i> Get Quote via WhatsApp
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-[9999] hidden flex items-center justify-center p-4" onclick="this.classList.add('hidden')">
+        <img id="lbImg" src="" class="max-w-full max-h-full object-contain">
+    </div>
+
+    <script>
+        function swapImg(s){ document.getElementById('mainImg').src = s; }
+        function openLightbox(){ document.getElementById('lbImg').src = document.getElementById('mainImg').src; document.getElementById('lightbox').classList.remove('hidden'); }
+    </script>
+</body>
+</html>
