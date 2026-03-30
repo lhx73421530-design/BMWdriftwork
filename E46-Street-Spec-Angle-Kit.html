@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E46 Street-Spec Angle Kit | 50° Lock | BMWdriftwork</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+    <style>.font-drift { font-family: 'Orbitron', sans-serif; } .m-line { background: linear-gradient(90deg, #0062B1 0%, #0033A0 33%, #EF4123 100%); }</style>
+</head>
+<body class="bg-[#050505] text-white font-sans">
+
+    <!-- 顶部导航 -->
+    <nav class="p-6 border-b border-gray-900 sticky top-0 bg-black/95 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="Angle-Kits-E46.html" class="font-drift text-sm italic text-gray-400 hover:text-white transition">← BACK TO E46 SERIES</a>
+            <div class="font-drift text-xl italic font-black uppercase">BMW<span class="text-blue-500">DRIFT</span><span class="text-red-600">WORK</span></div>
+        </div>
+    </nav>
+
+    <!-- 产品详情主体 -->
+    <main class="max-w-7xl mx-auto px-6 py-12 lg:py-20">
+        <div class="grid lg:grid-cols-2 gap-16">
+            
+            <!-- 左侧：图片库 (5张图) -->
+            <div class="space-y-6">
+                <!-- 大图展示 & 放大功能 -->
+                <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl cursor-zoom-in relative" onclick="openLightbox()">
+                    <img id="mainImg" src="images/e46-street-kit/blue-main.jpg" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    <div class="absolute bottom-4 right-4 bg-black/60 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest">Zoom</div>
+                </div>
+                <!-- 5张缩略图切换 -->
+                <div class="grid grid-cols-5 gap-2">
+                    <img src="images/e46-street-kit/blue-main.jpg" onclick="swap(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover shadow-lg hover:border-blue-500 transition">
+                    <img src="images/e46-street-kit/black.jpg" onclick="swap(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover shadow-lg hover:border-blue-500 transition">
+                    <img src="images/e46-street-kit/red.jpg" onclick="swap(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover shadow-lg hover:border-blue-500 transition">
+                    <img src="images/e46-street-kit/silver.jpg" onclick="swap(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover shadow-lg hover:border-blue-500 transition">
+                    <img src="images/e46-street-kit/install-look.jpg" onclick="swap(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover shadow-lg border-blue-500">
+                </div>
+            </div>
+
+            <!-- 右侧：描述与参数 -->
+            <div class="flex flex-col">
+                <div class="h-1 w-20 m-line mb-8"></div>
+                <h1 class="font-drift text-3xl md:text-5xl font-black italic mb-6 text-blue-500 uppercase">Street-Spec<br>Angle Lock Kit</h1>
+                
+                <p class="text-gray-400 text-lg mb-8 italic font-light leading-relaxed">
+                    The most budget-friendly drift upgrade. Simple bolt-on design for daily driving and track drift days.
+                </p>
+
+                <!-- 参数卡片 -->
+                <div class="bg-zinc-900/80 p-8 rounded-2xl border border-zinc-800 mb-10">
+                    <h3 class="font-drift text-xs font-bold mb-6 text-gray-500 uppercase tracking-[0.3em]">Technical Specs</h3>
+                    <ul class="space-y-4 text-[11px] font-medium uppercase">
+                        <li class="flex justify-between border-b border-zinc-800 pb-3"><span>Material</span><span class="text-white font-black italic">Aluminum Alloy</span></li>
+                        <li class="flex justify-between border-b border-zinc-800 pb-3"><span>Steering Angle</span><span class="text-white font-black italic">45° - 50° Degrees</span></li>
+                        <li class="flex justify-between border-b border-zinc-800 pb-3"><span>Ackermann</span><span class="text-white font-black italic">5° Degree</span></li>
+                        <li class="flex justify-between"><span>Installation</span><span class="text-green-500 font-black italic">Simple Bolt-On</span></li>
+                    </ul>
+                </div>
+
+                <!-- 价格显示 -->
+                <div class="text-4xl font-black mb-10 font-drift text-red-600 tracking-tighter">$249.00</div>
+
+                <!-- 购买按钮 -->
+                <a href="https://wa.me/8613561675079?text=Hi, I am interested in the E46 Street-Spec Angle Kit ($249)." 
+                   class="block w-full bg-blue-600 text-center py-5 font-black italic uppercase text-xl hover:bg-red-600 transition-all rounded shadow-lg">
+                    <i class="fab fa-whatsapp mr-3"></i> Get Quote via WhatsApp
+                </a>
+                <p class="text-center text-zinc-600 text-[10px] mt-6 uppercase tracking-[0.4em]">Worldwide Express Shipping Available</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- 全屏放大遮罩层 -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-[9999] hidden flex items-center justify-center p-4" onclick="this.classList.add('hidden')">
+        <img id="lbImg" src="" class="max-w-full max-h-full object-contain">
+    </div>
+
+    <script>
+        function swap(s){ document.getElementById('mainImg').src = s; }
+        function openLightbox(){ 
+            document.getElementById('lbImg').src = document.getElementById('mainImg').src;
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
