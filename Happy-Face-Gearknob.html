@@ -1,0 +1,48 @@
+<!-- 详情页代码模板 (以微笑挡把为例) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Face Gear Knob | BMWdriftwork</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+    <style>.font-drift { font-family: 'Orbitron', sans-serif; } .m-line { background: linear-gradient(90deg, #0062B1 0%, #0033A0 33%, #EF4123 100%); }</style>
+</head>
+<body class="bg-[#050505] text-white font-sans">
+    <nav class="p-6 border-b border-gray-900 sticky top-0 bg-black/95 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="Aesthetic-Parts.html" class="font-drift text-sm italic text-gray-400">← BACK</a>
+            <div class="font-drift text-xl italic font-black">BMW<span class="text-blue-500">DRIFT</span><span class="text-red-600">WORK</span></div>
+        </div>
+    </nav>
+    <main class="max-w-7xl mx-auto px-6 py-12 lg:py-20 grid lg:grid-cols-2 gap-16">
+        <div class="space-y-6">
+            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl cursor-zoom-in relative" onclick="openLightbox()">
+                <img id="mainImg" src="images/smile-knob.jpg" class="w-full h-full object-cover">
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+                <img src="images/smile-knob.jpg" onclick="swap(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover">
+                <img src="images/smile-knob2.jpg" onclick="swap(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover">
+                <img src="images/smile-knob3.jpg" onclick="swap(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover">
+            </div>
+        </div>
+        <div class="flex flex-col">
+            <div class="h-1 w-20 m-line mb-8"></div>
+            <h1 class="font-drift text-4xl font-black italic mb-6 text-red-600 uppercase">Happy Face<br>Gear Knob</h1>
+            <div class="bg-zinc-900/80 p-8 rounded-2xl border border-zinc-800 mb-10">
+                <ul class="space-y-4 text-[10px] font-medium uppercase italic">
+                    <li class="flex justify-between border-b border-zinc-800 pb-2"><span>Material</span><span>Resin</span></li>
+                    <li class="flex justify-between border-b border-zinc-800 pb-2"><span>Weight</span><span>100g</span></li>
+                    <li class="flex justify-between border-b border-zinc-800 pb-2"><span>Diameter</span><span>5.4cm / 2.13in</span></li>
+                    <li class="flex justify-between"><span>Included</span><span class="text-blue-500">Adapters & Spacers</span></li>
+                </ul>
+            </div>
+            <div class="text-4xl font-black mb-10 font-drift">$89.00</div>
+            <a href="https://wa.me/8613561675079?text=Interested in Happy Face Knob" class="block w-full bg-blue-600 text-center py-5 font-black italic uppercase rounded shadow-lg"><i class="fab fa-whatsapp mr-3"></i> WhatsApp Order</a>
+        </div>
+    </main>
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-[9999] hidden flex items-center justify-center p-4" onclick="this.classList.add('hidden')"><img id="lbImg" src="" class="max-w-full max-h-full object-contain"></div>
+    <script>function swap(s){document.getElementById('mainImg').src=s} function openLightbox(){document.getElementById('lbImg').src=document.getElementById('mainImg').src;document.getElementById('lightbox').classList.remove('hidden')}</script>
+</body>
+</html>
