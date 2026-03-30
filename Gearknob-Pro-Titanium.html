@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gearknob Pro | Aesthetic Parts | BMWdriftwork</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+    <style> .font-drift { font-family: 'Orbitron', sans-serif; } .m-line { background: linear-gradient(90deg, #0062B1 0%, #0033A0 33%, #EF4123 100%); } </style>
+</head>
+<body class="bg-[#050505] text-white font-sans">
+
+    <!-- 导航栏 (保持同步) -->
+    <nav class="p-6 border-b border-gray-900 sticky top-0 bg-black/95 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="font-drift text-sm italic tracking-widest text-gray-400 hover:text-white transition">← BACK TO SHOP</a>
+            <div class="font-drift text-xl italic font-black uppercase tracking-tighter">BMW<span class="text-blue-500">DRIFT</span><span class="text-red-600">WORK</span></div>
+        </div>
+    </nav>
+
+    <!-- 产品展示 -->
+    <main class="max-w-7xl mx-auto px-6 py-12 lg:py-20">
+        <div class="grid lg:grid-cols-2 gap-16">
+            <div class="space-y-6">
+                <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl cursor-zoom-in relative" onclick="openLightbox()">
+                    <img id="mainDisplay" src="images/gearknob-1.jpg" class="w-full h-full object-cover">
+                    <div class="absolute bottom-4 right-4 bg-black/60 px-3 py-1 rounded text-[10px] font-bold">ZOOM</div>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <img src="images/gearknob-1.jpg" onclick="updateMainImage(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover">
+                    <img src="images/gearknob-detail-1.jpg" onclick="updateMainImage(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover">
+                    <img src="images/gearknob-detail-2.jpg" onclick="updateMainImage(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover">
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="h-1 w-24 m-line mb-8"></div>
+                <h1 class="font-drift text-3xl md:text-5xl font-black italic mb-6 text-blue-500 uppercase leading-tight">M-Style Gearknob</h1>
+                <!-- 描述留空，待补充 -->
+                <p class="text-gray-400 text-lg mb-8 italic tracking-wide font-light border-l-4 border-zinc-800 pl-4">
+                    [Product Description Placeholder - Will update later]
+                </p>
+                <div class="text-4xl font-black mb-10 font-drift text-red-600 tracking-tighter">$99.00</div>
+                <a href="https://wa.me/8613561675079?text=Hi, I'm interested in the Gearknob." class="block w-full bg-blue-600 text-center py-5 font-black italic uppercase text-xl hover:bg-red-600 transition-all rounded shadow-lg">
+                    <i class="fab fa-whatsapp mr-3"></i> Inquiry via WhatsApp
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-[9999] hidden flex items-center justify-center p-4" onclick="closeLightbox()">
+        <img id="lightboxImg" src="" class="max-w-full max-h-full object-contain">
+    </div>
+
+    <script>
+        function updateMainImage(src) { document.getElementById('mainDisplay').src = src; }
+        function openLightbox() {
+            document.getElementById('lightboxImg').src = document.getElementById('mainDisplay').src;
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+        function closeLightbox() { document.getElementById('lightbox').classList.add('hidden'); }
+    </script>
+</body>
+</html>
