@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW E9X Street-Spec Pro Angle Kit | 65° Lock | BMWdriftwork</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+    <style>.font-drift { font-family: 'Orbitron', sans-serif; } .m-line { background: linear-gradient(90deg, #0062B1 0%, #0033A0 33%, #EF4123 100%); }</style>
+</head>
+<body class="bg-[#050505] text-white font-sans">
+    <!-- 顶部导航栏 (使用昨天的居中标准版) -->
+    <nav class="bg-black/95 border-b border-gray-900 sticky top-0 z-[100] backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center relative text-[10px]">
+            <div class="font-drift text-2xl font-black italic tracking-tighter mb-4 md:mb-0"><a href="index.html">BMW<span class="text-blue-500">DRIFT</span><span class="text-red-600">WORK</span></a></div>
+            <div class="flex items-center space-x-8 font-bold uppercase tracking-widest md:absolute md:left-1/2 md:-translate-x-1/2">
+                <a href="Global-Catalog.html" class="hover:text-red-500 transition">Angle Kits</a>
+                <a href="Handbrakes.html" class="hover:text-red-500 transition">Handbrakes</a>
+                <a href="Aesthetic-Parts.html" class="hover:text-red-500 transition">Aesthetic Parts</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-12 lg:py-20 grid lg:grid-cols-2 gap-16">
+        <div class="space-y-6">
+            <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 cursor-zoom-in relative" onclick="openLightbox()">
+                <img id="mainImg" src="images/e9x-street-kit/e9x-main.jpg" class="w-full h-full object-cover transition duration-500 hover:scale-105" onerror="this.src='https://via.placeholder.com/800?text=E9X+Main+Photo'">
+            </div>
+            <div class="grid grid-cols-5 gap-2">
+                <img src="images/e9x-street-kit/e9x-main.jpg" onclick="swap(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover">
+                <img src="images/e9x-street-kit/e9x-detail-1.jpg" onclick="swap(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover">
+                <img src="images/e9x-street-kit/e9x-detail-2.jpg" onclick="swap(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover">
+                <img src="images/e9x-street-kit/e9x-detail-3.jpg" onclick="swap(this.src)" class="bg-zinc-900 aspect-square rounded border border-zinc-800 cursor-pointer object-cover">
+                <img src="images/e9x-street-kit/e9x-install.jpg" onclick="swap(this.src)" class="bg-zinc-900 aspect-square rounded border border-blue-500 cursor-pointer object-cover">
+            </div>
+        </div>
+        <div class="flex flex-col">
+            <div class="h-1 w-20 m-line mb-8"></div>
+            <h1 class="font-drift text-3xl md:text-5xl font-black italic mb-6 text-blue-500 uppercase">E9X Street-Spec<br>Advanced Kit</h1>
+            <p class="text-gray-400 text-lg mb-8 italic font-light">Advanced Street-Spec for high-intensity drifting and track days.</p>
+            <div class="bg-zinc-900/80 p-8 rounded-2xl border border-zinc-800 mb-10 text-[11px] uppercase italic">
+                <ul class="space-y-4">
+                    <li class="flex justify-between border-b border-zinc-800 pb-3"><span>Material</span><span class="text-white font-black">High-Strength Carbon Steel</span></li>
+                    <li class="flex justify-between border-b border-zinc-800 pb-3"><span>Wheel Angle</span><span class="text-white font-black">55° - 65° Degrees</span></li>
+                    <li class="flex justify-between border-b border-zinc-800 pb-3"><span>Ackermann</span><span class="text-white font-black">Adjustable Geometry</span></li>
+                    <li class="flex justify-between"><span>Installation</span><span class="text-green-500 font-black">Simple Bolt-On Design</span></li>
+                </ul>
+            </div>
+            <div class="text-4xl font-black mb-10 font-drift text-red-600">$1790.00</div>
+            <a href="https://wa.me/8613561675079?text=I'm interested in the E9X Street Spec Kit ($1790)" class="block w-full bg-blue-600 text-center py-5 font-black italic uppercase rounded shadow-lg hover:bg-red-600 transition-all">
+                <i class="fab fa-whatsapp mr-3"></i> Get Quote via WhatsApp
+            </a>
+        </div>
+    </main>
+    <div id="lightbox" class="fixed inset-0 bg-black/95 z-[9999] hidden flex items-center justify-center p-4" onclick="this.classList.add('hidden')"><img id="lbImg" src="" class="max-w-full max-h-full object-contain"></div>
+    <script>function swap(s){document.getElementById('mainImg').src=s} function openLightbox(){document.getElementById('lbImg').src=document.getElementById('mainImg').src;document.getElementById('lightbox').classList.remove('hidden');document.body.style.overflow='hidden'}</script>
+</body>
+</html>
