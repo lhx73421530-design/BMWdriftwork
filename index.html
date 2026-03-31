@@ -104,15 +104,14 @@
             </div>
         </div>
 
-        <!-- E8X/E9X 通用街道版套件块 (修复图片遮挡版) -->
+        <!-- E8X/E9X 通用街道版套件块 (恢复全屏爆发感版) -->
 <div class="group bg-zinc-900/30 border border-zinc-800 p-3 rounded hover:border-blue-600 transition flex flex-col shadow-lg">
-    <!-- 图片容器：p-4 增加了内边距，确保零件不贴边 -->
-    <div class="aspect-square mb-4 overflow-hidden rounded bg-zinc-800 flex items-center justify-center p-4">
+    <!-- 去掉 p-4，改回 object-cover，让图片撑满 -->
+    <div class="aspect-square mb-4 overflow-hidden rounded bg-zinc-800 flex items-center justify-center">
         <a href="E9X-Street-Spec-Angle-Kit.html" class="w-full h-full block">
-            <!-- object-contain 确保产品全部显示，不被裁剪 -->
             <img src="images/e9x-street-kit/e9x-main.jpg" 
                  alt="E8X E9X Angle Kit" 
-                 class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
+                 class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
         </a>
     </div>
     <h3 class="font-drift text-[10px] mb-1 italic text-blue-400 uppercase leading-tight">E8X / E9X Street Spec</h3>
