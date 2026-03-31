@@ -6,7 +6,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
-    <style>.font-drift { font-family: 'Orbitron', sans-serif; } .m-line { background: linear-gradient(90deg, #0062B1 0%, #0033A0 33%, #EF4123 100%); }</style>
+    <style>.font-drift { font-family: 'Orbitron', sans-serif; } .m-line { background: linear-gradient(90deg, #0062B1 0%, #0033A0 33%, #EF4123 100%); }
+        /* 支付图标官方配色 */
+.color-paypal { color: #003087 !important; }     /* 官方 PayPal 蓝 */
+.color-visa { color: #1a1f71 !important; }       /* 官方 Visa 深蓝 */
+.color-mastercard { color: #eb001b !important; } /* 官方 Mastercard 红橙 */
+.color-amex { color: #2e77bb !important; }       /* 官方 Amex 蓝 */
+    </style>
 </head>
 <body class="bg-[#050505] text-white font-sans">
     <!-- 顶部导航栏 (使用昨天的居中标准版) -->
@@ -61,11 +67,12 @@
         <p><i class="fas fa-check text-blue-500 mr-2"></i> Full PayPal Buyer Protection Covered</p>
         <p><i class="fas fa-check text-blue-500 mr-2"></i> No Credit Card Data Stored</p>
     </div>
-    <div class="mt-4 flex space-x-3 opacity-30">
-        <i class="fab fa-cc-paypal text-xl"></i>
-        <i class="fab fa-cc-visa text-xl"></i>
-        <i class="fab fa-cc-mastercard text-xl"></i>
-    </div>
+    <<!-- 详情页信任模块图标部分 -->
+<div class="mt-4 flex space-x-3">
+    <i class="fab fa-cc-paypal text-xl color-paypal"></i>
+    <i class="fab fa-cc-visa text-xl color-visa"></i>
+    <i class="fab fa-cc-mastercard text-xl color-mastercard"></i>
+</div>
 </div>
 <!-- END: PayPal Trust Module -->
         </div>

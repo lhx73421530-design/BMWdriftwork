@@ -14,6 +14,11 @@
         .m-stripes { background: linear-gradient(90deg, #0062B1 0%, #0033A0 33%, #EF4123 100%); }
         .bg-carbon { background-color: #050505; background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); }
         .product-card:hover { border-color: #EF4123; transform: scale(1.02); transition: all 0.3s ease; }
+    /* 支付图标官方配色 */
+.color-paypal { color: #003087 !important; }     /* 官方 PayPal 蓝 */
+.color-visa { color: #1a1f71 !important; }       /* 官方 Visa 深蓝 */
+.color-mastercard { color: #eb001b !important; } /* 官方 Mastercard 红橙 */
+.color-amex { color: #2e77bb !important; }       /* 官方 Amex 蓝 */
     </style>
 </head>
 <body class="bg-carbon text-white font-sans">
@@ -87,7 +92,12 @@
                 <p class="text-[9px] text-zinc-600 uppercase tracking-tighter">Verified PayPal Merchant</p>
             </div>
         </div>
-        <div class="flex items-center justify-center md:justify-end opacity-40 space-x-4">
+        <div class="flex items-center justify-center md:justify-end <!-- 首页信任条图标部分 -->
+<div class="flex items-center justify-center md:justify-end space-x-4">
+    <i class="fab fa-cc-paypal text-2xl color-paypal"></i>
+    <i class="fab fa-cc-visa text-2xl color-visa"></i>
+    <i class="fab fa-cc-mastercard text-2xl color-mastercard"></i>
+</div> space-x-4">
             <i class="fab fa-cc-paypal text-2xl"></i>
             <i class="fab fa-cc-visa text-2xl"></i>
             <i class="fab fa-cc-mastercard text-2xl"></i>
@@ -209,7 +219,12 @@
                 <p class="text-[9px] text-zinc-600 uppercase">PayPal Verified Merchant</p>
             </div>
         </div>
-        <div class="flex items-center opacity-40 space-x-4">
+        <div class="flex items-center <!-- 首页信任条图标部分 -->
+<div class="flex items-center justify-center md:justify-end space-x-4">
+    <i class="fab fa-cc-paypal text-2xl color-paypal"></i>
+    <i class="fab fa-cc-visa text-2xl color-visa"></i>
+    <i class="fab fa-cc-mastercard text-2xl color-mastercard"></i>
+</div> space-x-4">
             <i class="fab fa-cc-paypal text-2xl"></i>
             <i class="fab fa-cc-visa text-2xl"></i>
             <i class="fab fa-cc-mastercard text-2xl"></i>
